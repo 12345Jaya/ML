@@ -1,0 +1,39 @@
+Data Pre-Processing
+-------------------
+. There is a need for preprocessing since the data in real world is dirty i.e., inconsistent, noisy and has missing values.
+. The greater is the data, the better we can train the models.
+. Data preprocessing is important to get the quality data.
+
+1) Data Cleaning
+2) Data Integration
+3) Data Transformation
+
+Data Cleaning
+-------------
+It involves the cleaning of data by filling missing values, smoothing noisy data and resolving the inconsistencies and removing outliers.
+
+1) Missing data -> ignore, fill manually or use numerical methods like mean, median or mode.
+2) Noisy data   -> Binning, Clustering, ML Algo, remove manually
+
+. Uses a technique called binning which is used on sorted dataset to smoothen any noise present in it, where data is divided into equal size bins and all data in bin can be replaced by it's mean/median or any boundary value.
+. Creation of groups or clusters based on the data having similar values and the values that are not related to data are termed as noisy data and can be removed.
+. Other ML algo like regression fits the values to regression lines.
+
+3) Inconsistent data -> The data that lies outside the data are called outliers which can be removed easily. 
+
+Data Integration
+----------------
+It is an important step used to merge data present in multiple sources and forms a data warehouse. 
+. To find some results from ECG or X-rays, we collect photos from different medical shops and form a big dataset.
+
+Data Transformation
+-------------------
+We need to change data into alternate forms by changing the value, structure or format of data using below mentioned methods
+1) Smoothing      -> removes noise
+2) Generalization -> low level to high level conversion (info from city to country)
+3) Normalization  -> numerical attributes are scaled up or down to fit between a specified range. Various methods like min max, set score etc methods are used
+4) Attribution Construction -> new properties of data created from existing dataset.
+
+
+
+
