@@ -43,3 +43,4 @@ When data is too large to handle, we obtain a reduced representation of dataset 
 . Various reduction technologies are dimensional reduction, numerical reduction, data compression. 
 . Dimensional reduction are used to perform feature extraction. 
 . Numerical reduction reduces the data into numerical model.
+
