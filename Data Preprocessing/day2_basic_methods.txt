@@ -1,0 +1,49 @@
+Importing libraries
+-------------------
+import numpy as np
+import pands as pd
+
+Importing datasets
+------------------
+//csv -> comma separated value
+
+. headers_data={.....}; //headings for the data set coloumns
+  df = pd.read_csv("dataset_1.data",names = headers.data)
+  df
+
+. To get the first 15 rows in dataset
+  df.head(15)
+
+. To get the last 15 rows in dataset
+  df.tail(15)
+
+1) Data can be object, float, int, bool and datetime64.
+   To find the data type, we use
+   df.dtypes
+
+2) If we want to find statistical summary of data that is count, mean etc, we use
+   df.describe()
+   // it only gives statistics of int, float
+   // gives mean, std, cout, min, max, 25%, 50%, 75%
+
+   df.describe(include="all")
+   // all data types
+   // gives unique, top, freq  (categorical data)
+
+3) If we want to know about index dtype,coloumns,non-null values and memory usage.
+   df.info()
+   
+4) numpy array is homogenous //same type of values
+   l = np.array([1,2,3])
+   l.dtype    //dtype('int64')
+
+   l=np.array([1,2,3,"hello"])
+   l.dtype    //array(['1','2','3','hello'],dtype='<U21')  became an object
+
+5) df.replace('?',np.nan,implace=True)
+
+6) If we want to save dataset, we use
+   df.to_csv("saved_dataset.csv")   //export in terms of csv with name saved_dataset
+
+
+
