@@ -7,8 +7,9 @@ Data Pre-Processing
 1) Data Cleaning
 2) Data Integration
 3) Data Transformation
+4) Data Reduction
 
-Data Cleaning
+Data Cleaning    
 -------------
 It involves the cleaning of data by filling missing values, smoothing noisy data and resolving the inconsistencies and removing outliers.
 
@@ -32,8 +33,13 @@ We need to change data into alternate forms by changing the value, structure or 
 1) Smoothing      -> removes noise
 2) Generalization -> low level to high level conversion (info from city to country)
 3) Normalization  -> numerical attributes are scaled up or down to fit between a specified range. Various methods like min max, set score etc methods are used
-4) Attribution Construction -> new properties of data created from existing dataset.
+4) Attribution Construction -> new properties of data created from existing attributes. (From Data Of Birth we can classify whether a person is senior citizen or not)
+5) Aggregation    -> datasets are summarized into useful aggregates to acquire desirable results and also to enhance the user experience or the application itself. (aggregates means parts)
+6) Discretization -> Converting continuous values into intervals.
 
-
-
-
+Data Reduction
+--------------
+When data is too large to handle, we obtain a reduced representation of dataset that is much smaller in volume but produces same quality of result
+. Various reduction technologies are dimensional reduction, numerical reduction, data compression. 
+. Dimensional reduction are used to perform feature extraction. 
+. Numerical reduction reduces the data into numerical model.
