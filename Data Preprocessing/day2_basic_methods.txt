@@ -23,7 +23,7 @@ Importing datasets
 
 2) If we want to find statistical summary of data that is count, mean etc, we use
    df.describe()
-   // it only gives statistics of int, float
+   // it only gives statistics of int, float (continuous data -> useful for regression model) 
    // gives mean, std, cout, min, max, 25%, 50%, 75%
 
    df.describe(include="all")
