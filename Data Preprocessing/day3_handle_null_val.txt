@@ -1,0 +1,55 @@
+
+Missing Values (it occurs when no data value is stored for a variable)
+--------------
+It may occur due to
+1) Data loss
+2) User may forgot to fill the data
+3) Not mandatory coloumns in form
+
+Types 
+-----
+1) Standard missing values     -> blank
+2) Non-standard missing values -> n/a, NA, -
+3) Unexpected missing values   -> other datatype is filled
+                                  (Instead of yes/no we filled 12)
+
+. Pandas is not able to recognize the null values i.e., ? marks, it is giving all values as not null including question marks.
+
+Convert to nan
+--------------
+pd.replace("?", np.nan, implace = True) //implace=True saves the changes into original dataset.
+
+1) To check null values -> pd.isnull()
+                        -> pd.notnull()
+
+2) To check the freq of values -> value_counts()
+   missing_data = df.isnull()
+   for i in headers:
+       print(i)
+       print(missing_data[i].value_counts())
+    
+How to deal with missing data
+-----------------------------
+1) Drop (whole row/ whole column)   more missing val in col -> drop col
+2) Replace (mean/median or mode)    outliers more -> median, less ->mean   categorical ->mode (no of doors)
+3) Leave
+
+Replace with mean
+-----------------
+1) a = df['normalized-losses'].astype('float')  # must not be obj, to apply mean we need int or float.
+   a = a.mean()   # mean(axis=0); -> row wise mean
+2) df['normalized-losses'].replace(np.nan,a,implace = True);
+
+Replace with mode
+-----------------
+a = df['no_of_doors'].value_counts().idxmax()   # 'four'
+df['no_of_doors'].replace(np.nan,a,implace = True)
+
+Drop rows / columns
+-------------------
+1) df.dropna(subset = ['prices'], implace = True, axis=0)
+2) Reset indexes
+   df.reset(drop = True, implace = True)
+
+
+
