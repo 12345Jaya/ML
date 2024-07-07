@@ -40,7 +40,7 @@ Importing datasets
    l=np.array([1,2,3,"hello"])
    l.dtype    //array(['1','2','3','hello'],dtype='<U21')  became an object
 
-5) df.replace('?',np.nan,implace=True)
+5) df.replace('?',np.nan,implace=True)  // replaces ? with nan
 
 6) If we want to save dataset, we use
    df.to_csv("saved_dataset.csv")   //export in terms of csv with name saved_dataset
